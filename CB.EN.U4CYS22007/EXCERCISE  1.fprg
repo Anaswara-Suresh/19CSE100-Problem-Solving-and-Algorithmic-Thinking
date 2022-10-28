@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10.31.12 AM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjItMTAtMjg7MDkuMjQuNTkgQU07MjI5Mw=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjItMTAtMjg7MTAuMzEuMTIgQU07NDsyMzgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Name" type="String" array="False" size=""/>
+            <output expression="&quot; ENTER YOUR NAME &quot;" newline="True"/>
+            <input variable="Name"/>
+            <declare name="RollNo" type="Integer" array="False" size=""/>
+            <output expression="&quot; ENTER YOUR ROLL NO &quot;" newline="True"/>
+            <input variable="RollNo"/>
+            <declare name="Address" type="String" array="False" size=""/>
+            <output expression="&quot; ENTER YOUR ADDRESS &quot;" newline="True"/>
+            <input variable="Address"/>
+            <declare name="BloodGroup" type="String" array="False" size=""/>
+            <output expression="&quot; ENTER YOUR BLOOD GROUP &quot;" newline="True"/>
+            <input variable="BloodGroup"/>
+            <declare name="PhoneNumber" type="Integer" array="False" size=""/>
+            <output expression="&quot; ENTER YOUR PHONE NUMBER &quot;" newline="True"/>
+            <input variable="PhoneNumber"/>
+            <declare name="DepartmentAssigned" type="String" array="False" size=""/>
+            <output expression="&quot; ENTER YOUR DEPARTMENT &quot;" newline="True"/>
+            <input variable="DepartmentAssigned"/>
+            <output expression="&quot; NAME : &quot; &amp; Name" newline="True"/>
+            <output expression="&quot; ROLL NO : &quot; &amp; RollNo" newline="True"/>
+            <output expression="&quot; ADDRESS : &quot; &amp; Address" newline="True"/>
+            <output expression="&quot; BLOOD GROUP : &quot; &amp; BloodGroup" newline="True"/>
+            <output expression="&quot; PHONE NUMBER : &quot; &amp; PhoneNumber" newline="True"/>
+            <output expression="&quot; DEPARTMENT : &quot; &amp; DepartmentAssigned" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
