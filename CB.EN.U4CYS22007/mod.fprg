@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:08:00 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTExLTA0OzEwOjEwOjMyIEFNOzMwNDQ="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTExLTA0OzExOjA4OjAwIEFNOzc7MzE2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="finding the mod "/>
+            <declare name="a" type="Real" array="False" size=""/>
+            <output expression="&quot; ENTER THE VALUE OF DIVIDENT &quot;" newline="True"/>
+            <comment text="value of dividend given"/>
+            <input variable="a"/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <output expression="&quot; ENTER THE VALUE OF DIVISOR &quot;" newline="True"/>
+            <comment text="value of divisor given"/>
+            <input variable="b"/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <assign variable="q" expression="a/b"/>
+            <comment text="quotient is found"/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="a-(q*b)"/>
+            <comment text="mod or remainder is found"/>
+            <output expression="&quot; MOD :  &quot;" newline="True"/>
+            <output expression="r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
