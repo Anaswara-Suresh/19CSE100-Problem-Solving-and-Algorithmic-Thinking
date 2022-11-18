@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:47:40 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTExLTE4OzA5OjA0OjA1IEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTExLTE4OzEwOjQ3OjQwIEFNOzM7MzE2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <assign variable="name" expression="&quot;ANASWARA&quot;"/>
+            <declare name="accno" type="Integer" array="False" size=""/>
+            <assign variable="accno" expression="12345678"/>
+            <declare name="pin" type="Integer" array="False" size=""/>
+            <assign variable="pin" expression="5566"/>
+            <declare name="balance" type="Integer" array="False" size=""/>
+            <assign variable="balance" expression="10000"/>
+            <comment text="values are assigned "/>
+            <output expression="&quot; WELCOME TO AMK BANK &quot;" newline="True"/>
+            <output expression="&quot; PLEASE INSERT YOUR CARD &quot;" newline="True"/>
+            <declare name="withdrmny" type="Integer" array="False" size=""/>
+            <output expression="&quot; ENTER THE AMOUNT YOU WANT TO WITHDRAW : &quot;" newline="True"/>
+            <input variable="withdrmny"/>
+            <comment text="input amount you want to withdraw"/>
+            <if expression="withdrmny&lt;balance">
+                <then>
+                    <comment text="checking correct pin"/>
+                    <output expression="&quot; ENTER YOUR PIN &quot;" newline="True"/>
+                    <declare name="pingiven" type="Integer" array="False" size=""/>
+                    <input variable="pingiven"/>
+                    <if expression="pingiven=pin">
+                        <then>
+                            <output expression="&quot; TRANSACTION IN PROCESS &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; INCORRECT PIN &quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <comment text="new balance is given"/>
+                    <declare name="newbalance" type="Integer" array="False" size=""/>
+                    <assign variable="newbalance" expression="balance - withdrmny"/>
+                    <output expression="&quot; BALANCE : &quot;&amp;newbalance" newline="True"/>
+                    <comment text="transaction is over"/>
+                </then>
+                <else>
+                    <output expression="&quot; INSUFFICIENT FUNDS &quot;" newline="True"/>
+                    <comment text="insufficient money"/>
+                </else>
+            </if>
+            <output expression="&quot; THANK YOU FOR CHOOSING OUR BANK &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

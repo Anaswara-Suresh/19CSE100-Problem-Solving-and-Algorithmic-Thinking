@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:54:30 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTExLTE4OzA5OjA0OjA1IEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTExLTE4OzEwOjU0OjMwIEFNOzM7MzE2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <assign variable="name" expression="&quot;ANASWARA&quot;"/>
+            <declare name="accno" type="Integer" array="False" size=""/>
+            <assign variable="accno" expression="12345678"/>
+            <declare name="pin" type="Integer" array="False" size=""/>
+            <assign variable="pin" expression="5566"/>
+            <declare name="balance" type="Integer" array="False" size=""/>
+            <assign variable="balance" expression="10000"/>
+            <comment text="the assigned values are given"/>
+            <output expression="&quot; WELCOME TO AMK BANK &quot;" newline="True"/>
+            <output expression="&quot; PLEASE INSERT YOUR CARD &quot;" newline="True"/>
+            <output expression="&quot; IF YOU WANT TO WITHDRAW PRESS 1 &quot;" newline="True"/>
+            <output expression="&quot; IF YOU WANT TO DEPOSIT PRESS 2 &quot;" newline="True"/>
+            <output expression="&quot; IF YOU WANT TO CHECK THE BALANCE PRESS 3 &quot;" newline="True"/>
+            <comment text="options in the interface is shown"/>
+            <declare name="function" type="Integer" array="False" size=""/>
+            <input variable="function"/>
+            <if expression="function = 1">
+                <then>
+                    <comment text="withdrawing money "/>
+                </then>
+                <else>
+                    <if expression="function=2">
+                        <then>
+                            <comment text="depositing money"/>
+                            <output expression="&quot; ENTER YOUR PIN &quot;" newline="True"/>
+                            <declare name="pingiven" type="Integer" array="False" size=""/>
+                            <input variable="pingiven"/>
+                            <if expression="pingiven = pin">
+                                <then>
+                                    <output expression="&quot; YOUR TRANSACTION IS IN PROCESS &quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot; INCORRECT PASSWORD &quot;" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot; ENTER THE AMOUNT YOU WANT TO DEPOSIT &quot;" newline="True"/>
+                            <declare name="depmny" type="Integer" array="False" size=""/>
+                            <input variable="depmny"/>
+                            <declare name="balancenew" type="Integer" array="False" size=""/>
+                            <assign variable="balancenew" expression="balance + depmny"/>
+                            <output expression="&quot; CURRENT BALANCE : &quot;&amp;balancenew" newline="True"/>
+                            <output expression="&quot; THANK YOUN FOR DEPOSITING HAVE A NICE DAY &quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </then>
+                        <else>
+                            <if expression="function =3">
+                                <then>
+                                    <comment text="balance is given"/>
+                                    <output expression="&quot; YOUR BANK BALANCE IS : &quot;&amp;balance" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <comment text="withdrawing money"/>
+            <declare name="withdrmny" type="Integer" array="False" size=""/>
+            <output expression="&quot; ENTER THE AMOUNT YOU WANT TO WITHDRAW : &quot;" newline="True"/>
+            <input variable="withdrmny"/>
+            <if expression="withdrmny&lt;balance">
+                <then>
+                    <comment text="SUFFICIENT BALANCE IS THERE"/>
+                    <output expression="&quot; ENTER YOUR PIN &quot;" newline="True"/>
+                    <declare name="pingiven" type="Integer" array="False" size=""/>
+                    <input variable="pingiven"/>
+                    <if expression="pingiven=pin">
+                        <then>
+                            <output expression="&quot; TRANSACTION IN PROCESS &quot;" newline="True"/>
+                            <declare name="newbalance" type="Integer" array="False" size=""/>
+                            <assign variable="newbalance" expression="balance - withdrmny"/>
+                            <output expression="&quot; BALANCE : &quot;&amp;newbalance" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; INCORRECT PIN &quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <output expression="&quot; THANK YOU FOR CHOOSING OUR BANK &quot;" newline="True"/>
+                    <output expression="&quot; HAVE A NICE DAY &quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="NOT ENOUGH BALANCE"/>
+                    <output expression="&quot; INSUFFICIENT FUNDS &quot;" newline="True"/>
+                    <output expression="&quot; IF YOU WOULD LIKE TO CONTINUE PRESS 5&quot;" newline="True"/>
+                    <declare name="continue" type="Integer" array="False" size=""/>
+                    <assign variable="continue" expression="5"/>
+                    <declare name="contgiven" type="Integer" array="False" size=""/>
+                    <input variable="contgiven"/>
+                    <if expression="contgiven=continue">
+                        <then>
+                            <comment text="want to continue"/>
+                            <declare name="withdrmny" type="Integer" array="False" size=""/>
+                            <output expression="&quot; ENTER THE AMOUNT YOU WANT TO WITHDRAW : &quot;" newline="True"/>
+                            <input variable="withdrmny"/>
+                            <output expression="&quot; ENTER YOUR PIN &quot;" newline="True"/>
+                            <declare name="pingiven" type="Integer" array="False" size=""/>
+                            <input variable="pingiven"/>
+                            <if expression="pingiven=pin">
+                                <then>
+                                    <output expression="&quot; TRANSACTION IN PROCESS &quot;" newline="True"/>
+                                    <declare name="newbalance" type="Integer" array="False" size=""/>
+                                    <assign variable="newbalance" expression="balance - withdrmny"/>
+                                    <output expression="&quot; BALANCE : &quot;&amp;newbalance" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot; INCORRECT PIN &quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <comment text="doesnt want to continue"/>
+                            <output expression="&quot; TRANSACTION CANCELLED &quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;THANK YOU FOR CHHOSING OUR BANK &quot;" newline="True"/>
+                    <output expression="&quot; HAVE A NICE DAY&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
