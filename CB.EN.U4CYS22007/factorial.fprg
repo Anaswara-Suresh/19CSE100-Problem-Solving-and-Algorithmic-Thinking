@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:18:02 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTEyLTAyOzEwOjA2OjU5IEFNOzMzMTM="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAwNzsyMDIyMjNNQVlDMDA0NDsyMDIyLTEyLTAyOzEwOjE4OjAyIEFNOzE7MzQxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="start program "/>
+            <declare name="counter, factorial" type="Integer" array="False" size=""/>
+            <comment text="declare variables "/>
+            <output expression="&quot;enter the number which you need factorial &quot;" newline="True"/>
+            <input variable="counter"/>
+            <comment text="input the counter value"/>
+            <assign variable="factorial" expression="1"/>
+            <if expression="counter &gt; 0">
+                <then>
+                    <comment text="counter is greater than 0"/>
+                    <while expression="counter &gt;0">
+                        <comment text="calculating the factorial"/>
+                        <assign variable="factorial" expression="factorial * counter"/>
+                        <assign variable="counter" expression="counter - 1"/>
+                    </while>
+                    <comment text="end result is displayed"/>
+                    <output expression="&quot;Factorial = &quot;&amp;factorial" newline="True"/>
+                </then>
+                <else>
+                    <comment text="counter less than 0"/>
+                    <output expression="&quot; factorial not defined &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
