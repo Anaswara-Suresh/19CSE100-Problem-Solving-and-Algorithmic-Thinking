@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-08 10.21.03 PM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMDg7MTAuMDkuMjkgUE07MjMwMA=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMDg7MTAuMjEuMDMgUE07MjsyMzk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, sum" type="Integer" array="False" size=""/>
+            <comment text="assign variables"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <comment text="input values for variables"/>
+            <while expression="n&lt;=1000">
+                <assign variable="sum" expression="i+n"/>
+                <comment text="finding the series or values "/>
+                <output expression="sum" newline="True"/>
+                <comment text="output the series"/>
+                <assign variable="i" expression="n"/>
+                <assign variable="n" expression="sum"/>
+                <comment text="loop"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
