@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11.24.02 AM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMDk7MTAuMTUuNTggQU07MjI4NQ=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMDk7MTAuMTguMjQgQU07MTtBbmFzd2FyYTtBTlU7MjAyMi0xMi0wOTswOS4zNC4xOSBBTTttYXJrc19vZl9uX3N0dWRlbnRzLmZwcmc7NzMxNQ=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMDk7MTEuMjQuMDIgQU07NTsyMzg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="indexsub" type="Integer" array="False" size=""/>
+            <declare name="mark1" type="Real" array="True" size="6"/>
+            <declare name="mark" type="Real" array="False" size=""/>
+            <declare name="mark2" type="Integer" array="True" size="6"/>
+            <declare name="mark3" type="Integer" array="True" size="6"/>
+            <declare name="mark4" type="Real" array="True" size="6"/>
+            <declare name="mark5" type="Real" array="True" size="6"/>
+            <comment text="arrays are initialised&#13;&#10;"/>
+            <output expression="&quot; marks of roll no 1 &quot;" newline="True"/>
+            <for variable="indexsub" start="1" end="5" direction="inc" step="1">
+                <comment text="each students mark in 5 subjects "/>
+                <comment text="1st student"/>
+                <output expression="&quot; enter mark for subject [&quot;&amp;indexsub&amp;&quot;]&quot;" newline="True"/>
+                <input variable="mark"/>
+                <assign variable="mark1[indexsub]" expression="mark"/>
+            </for>
+            <declare name="total1" type="Real" array="False" size=""/>
+            <assign variable="total1" expression="mark1[1]+mark1[2]+mark1[3]+mark1[4]+mark1[5]"/>
+            <output expression="&quot; ROLL NO : 1 &quot;" newline="True"/>
+            <output expression="&quot; TOTAL MARK OF ROLL NO 1 = &quot;&amp; total1" newline="True"/>
+            <declare name="avg1" type="Real" array="False" size=""/>
+            <assign variable="avg1" expression="total1/5"/>
+            <output expression="&quot; AVERAGE MARK OF ROLL NO 1 = &quot;&amp;avg1" newline="True"/>
+            <comment text="total and average is found"/>
+            <output expression="&quot; marks of roll no 2 &quot;" newline="True"/>
+            <for variable="indexsub" start="1" end="5" direction="inc" step="1">
+                <comment text="marks of second number"/>
+                <output expression="&quot; enter mark for subject [&quot;&amp;indexsub&amp;&quot;]&quot;" newline="True"/>
+                <input variable="mark"/>
+                <assign variable="mark2[indexsub]" expression="mark"/>
+            </for>
+            <declare name="total2" type="Real" array="False" size=""/>
+            <assign variable="total2" expression="mark2[1]+mark2[2]+mark2[3]+mark2[4]+mark2[5]"/>
+            <output expression="&quot; ROLL NO : 2 &quot;" newline="True"/>
+            <output expression="&quot; TOTAL MARK OF ROLL NO 2 = &quot;&amp; total2" newline="True"/>
+            <declare name="avg2" type="Real" array="False" size=""/>
+            <assign variable="avg2" expression="total2/5"/>
+            <output expression="&quot; AVERAGE MARK OF ROLL NO 2 = &quot;&amp;avg2" newline="True"/>
+            <output expression="&quot; marks of roll no 3 &quot;" newline="True"/>
+            <for variable="indexsub" start="1" end="5" direction="inc" step="1">
+                <comment text="marks of 3rd student"/>
+                <output expression="&quot; enter mark for subject [&quot;&amp;indexsub&amp;&quot;]&quot;" newline="True"/>
+                <input variable="mark"/>
+                <assign variable="mark3[indexsub]" expression="mark"/>
+            </for>
+            <declare name="total3" type="Real" array="False" size=""/>
+            <assign variable="total3" expression="mark3[1]+mark3[2]+mark3[3]+mark3[4]+mark3[5]"/>
+            <output expression="&quot; ROLL NO : 3 &quot;" newline="True"/>
+            <output expression="&quot; TOTAL MARK OF ROLL NO 3 = &quot;&amp; total3" newline="True"/>
+            <declare name="avg3" type="Real" array="False" size=""/>
+            <assign variable="avg3" expression="total3/5"/>
+            <output expression="&quot; AVERAGE MARK OF ROLL NO 3 = &quot;&amp;avg3" newline="True"/>
+            <output expression="&quot; marks of roll no 4 &quot;" newline="True"/>
+            <for variable="indexsub" start="1" end="5" direction="inc" step="1">
+                <comment text="marks of 4th student"/>
+                <output expression="&quot; enter maek for subject [&quot;&amp;indexsub&amp;&quot;]&quot;" newline="True"/>
+                <input variable="mark"/>
+                <assign variable="mark4[indexsub]" expression="mark"/>
+            </for>
+            <declare name="total4" type="Real" array="False" size=""/>
+            <assign variable="total4" expression="mark4[1]+mark4[2]+mark4[3]+mark4[4]+mark4[5]"/>
+            <output expression="&quot; ROLL NO : 4  &quot;" newline="True"/>
+            <output expression="&quot; TOTAL MARK OF ROLL NO 4 = &quot;&amp; total4" newline="True"/>
+            <declare name="avg4" type="Real" array="False" size=""/>
+            <assign variable="avg4" expression="total4/5"/>
+            <output expression="&quot; AVERAGE MARK OF ROLL NO 4 = &quot;&amp;avg4" newline="True"/>
+            <comment text="avg and total is found"/>
+            <output expression="&quot; marks of roll no 5&quot;" newline="True"/>
+            <for variable="indexsub" start="1" end="5" direction="inc" step="1">
+                <comment text="marks of 5th student"/>
+                <output expression="&quot; enter maek for subject [&quot;&amp;indexsub&amp;&quot;]&quot;" newline="True"/>
+                <input variable="mark"/>
+                <assign variable="mark5[indexsub]" expression="mark"/>
+            </for>
+            <declare name="total5" type="Real" array="False" size=""/>
+            <assign variable="total5" expression="mark5[1]+mark5[2]+mark5[3]+mark5[4]+mark5[5]"/>
+            <output expression="&quot; ROLL NO : 5 &quot;" newline="True"/>
+            <output expression="&quot; TOTAL MARK OF ROLL NO 2 = &quot;&amp; total2" newline="True"/>
+            <declare name="avg5" type="Real" array="False" size=""/>
+            <assign variable="avg5" expression="total5/5"/>
+            <output expression="&quot; AVERAGE MARK OF ROLL NO 5 = &quot;&amp;avg5" newline="True"/>
+            <comment text="avg and total is found"/>
+        </body>
+    </function>
+</flowgorithm>
