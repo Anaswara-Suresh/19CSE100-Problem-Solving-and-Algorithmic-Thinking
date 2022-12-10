@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 10.05.23 AM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMDg7MTAuMjEuMTIgUE07MjI4Ng=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMTA7MTAuMDUuMjMgQU07NzsyMzgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, sum" type="Integer" array="False" size=""/>
+            <comment text="variables declared"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <comment text="values initialised"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <comment text="first loop"/>
+                <for variable="n" start="1" end="10" direction="inc" step="1">
+                    <comment text="second loop"/>
+                    <assign variable="sum" expression="i+n"/>
+                    <output expression="i&amp;&quot;+&quot;&amp;n&amp;&quot;=&quot;&amp;sum" newline="True"/>
+                    <comment text="output the sum"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
