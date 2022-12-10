@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 10.44.39 AM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIyLTEyLTA5OzA5OjEzOjEyIEFNOzIxMDQ="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIyLTEyLTEwOzEwOjI0OjQ5IEFNOzI7MjIwOQ=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjItMTItMTA7MTAuNDQuMzkgQU07MTsyMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to create an array  of integers "/>
+            <declare name="Array" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="loop the values to input the array"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <declare name="num" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter number:&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="Array[i]" expression="num"/>
+            </for>
+            <output expression="&quot;Array contents:&quot;" newline="True"/>
+            <comment text="loop to output the values from the array"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Array&quot;&amp;&quot;[&quot;&amp;i&amp;&quot;]&quot;&amp;&quot;=&quot;&amp; Array[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
