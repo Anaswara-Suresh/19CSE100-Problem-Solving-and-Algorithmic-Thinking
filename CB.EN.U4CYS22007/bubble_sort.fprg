@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:34:45 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAwNzsyMDIyMjNNQVlDMDEwNTsyMDIzLTAxLTIwOzA5OjA1OjUwIEFNOzMzMDg="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAwNzsyMDIyMjNNQVlDMDEwNTsyMDIzLTAxLTIwOzEwOjM0OjQ1IEFNOzI7MzQxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables are declared"/>
+            <declare name="n, j, minval" type="Integer" array="False" size=""/>
+            <output expression="&quot; enter the number of elements &quot;" newline="True"/>
+            <comment text="input the value of n"/>
+            <input variable="n"/>
+            <declare name="val" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="first loop"/>
+            <comment text="input values for array"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot; enter the value of element &quot; &amp; i" newline="True"/>
+                <input variable="val[i]"/>
+            </for>
+            <comment text="second loop"/>
+            <comment text="minimum value is found and swapped with array"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i+1&#13;&#10;" end="n-1" direction="inc" step="1">
+                    <if expression="val[j-1] &gt; val[j]">
+                        <then>
+                            <assign variable="minval" expression="val[j]"/>
+                            <assign variable="val[j]" expression="val[j-1]"/>
+                            <assign variable="val[j-1]" expression="minval"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <for variable="j" start="i+1&#13;&#10;" end="n-1" direction="inc" step="1">
+                    <if expression="val[j-1] &gt; val[j]">
+                        <then>
+                            <assign variable="minval" expression="val[j]"/>
+                            <assign variable="val[j]" expression="val[j-1]"/>
+                            <assign variable="val[j-1]" expression="minval"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <comment text="sorted array is printed"/>
+            <output expression="&quot; sorted numbers &quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="val[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
