@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08.30.02 PM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjMtMDEtMjc7MDguMDkuNTMgUE07MjMwNA=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjMtMDEtMjc7MDguMzAuMDIgUE07MTsyNDAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare variables"/>
+            <declare name="fact, n" type="Integer" array="False" size=""/>
+            <output expression="&quot; enter the number for which you want the factorial &quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="calling function"/>
+            <assign variable="fact" expression="factorial(N)"/>
+            <output expression="&quot; the factorial of  &quot; &amp;n&amp; &quot; is&quot;" newline="True"/>
+            <comment text="output"/>
+            <output expression="fact" newline="True"/>
+        </body>
+    </function>
+    <function name="factorial" type="Integer" variable="fact1">
+        <parameters>
+            <parameter name="N1" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="function already declared"/>
+            <declare name="fact1" type="Integer" array="False" size=""/>
+            <comment text="if function initialised"/>
+            <if expression="N1==1">
+                <then>
+                    <assign variable="fact1" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="fact1" expression="factorial(N1-1)*N1"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
