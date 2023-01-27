@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09.15.31 PM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjMtMDEtMjc7MDguMDkuNTMgUE07MjMwNA=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjMtMDEtMjc7MDkuMTUuMzEgUE07MjsyNDA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare variables"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot; enter the number of digits for which you want to find the sum &quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="calling function"/>
+            <output expression="&quot;  THE SUM OF FIRST  &quot; &amp;n&amp; &quot;  NUMBERS IS  &quot;&amp;Rsum(n)" newline="True"/>
+            <comment text="output"/>
+        </body>
+    </function>
+    <function name="RSum" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="function already declared"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <comment text="if function initialised"/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="sum" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="sum" expression="Rsum(n-1)+n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

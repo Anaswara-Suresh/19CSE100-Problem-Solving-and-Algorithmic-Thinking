@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anaswara"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09.28.12 PM"/>
+        <attribute name="created" value="QW5hc3dhcmE7QU5VOzIwMjMtMDEtMjc7MDkuMTUuNTkgUE07MjMwOA=="/>
+        <attribute name="edited" value="QW5hc3dhcmE7QU5VOzIwMjMtMDEtMjc7MDkuMjguMTIgUE07MTsyNDA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables declared"/>
+            <declare name="i, j, n" type="Integer" array="False" size=""/>
+            <comment text="input value of n"/>
+            <output expression="&quot; ENTER THE NUMBER OF ELEMENTS YOU WANT IN YOUR FIBONACCI SERIES &quot;" newline="True"/>
+            <input variable="N"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="j" expression="1"/>
+            <call expression="fibonacci(i,j,n)"/>
+        </body>
+    </function>
+    <function name="fibonacci" type="None" variable="">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="j" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="function already declared"/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <comment text="if function initialised"/>
+            <if expression="n&gt;0">
+                <then>
+                    <output expression="i" newline="True"/>
+                    <assign variable="temp" expression="i"/>
+                    <assign variable="i" expression="j"/>
+                    <assign variable="j" expression="j+temp"/>
+                    <assign variable="n" expression="n-1"/>
+                    <call expression="fibonacci(i,j,n)"/>
+                </then>
+                <else>
+                    <output expression="&quot;over&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
